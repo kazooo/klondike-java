@@ -1,12 +1,12 @@
 # klondike-java
 
-Projekt do predmetu IJA 2016/2017
+## Projekt do predmetu IJA 2016/2017
 
-Clenove tymu:
+## Clenove tymu:
 	Kiselevich Roman (xkisel00)
 	Ermak Aleksei (xermak00)
 
-Popis projektu:
+## Popis projektu:
 	Implementace aplikaci Pasians (Solitaire) Klondike, ktera vychazi ze stejnojmenne karetni hry.
 	Aplikace implementuje zakladni pravidla hry. Je mozne rozehrat az 4 hry soucasne
 	Pokud je rozehrana pouze jedna hra, plocha grafického rozhraní obsahuje pouze tuto hru (jedno hraci platno)
@@ -19,7 +19,7 @@ Popis projektu:
 	Pro graficke uzivatelske rozhraní byla pouzita technologie JFC/Swing.
 	Pro preklad a spusteni projektu pouziva se nastroj Ant.
 
-Kompilace a spousteni:
+## Kompilace a spousteni:
 	Nejdrive je treba spustit skript get-libs.sh ve slozce lib pro stazeni z internetu obrazku karet a jinych pozadavanych souboru.
 	Aplikace se kompiluje nastrojem Ant, pomoci prikazu ant compile.
 	Aplikace se spousti pomoci prikazu ant run.
