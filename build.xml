@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<project name="Klondike" default="all" basedir=".">
+
+	<!-- Properties -->
+	<property name="src" value="${basedir}/src"/>
+	<property name="build" value="${basedir}/build"/>
+	<property name="doc" value="${basedir}/doc"/>
+	<property name="client" value="${basedir}/dest-client"/>
+	<property name="application" value="${client}/ija-client.jar"/>
+	<property name="manifest" value="${src}/MANIFEST.MF"/>
+
+	<!-- Directories creating  -->
+	<target name="init" description="Creating directories">
+		<mkdir dir="${build}"/>
+		<mkdir dir="${doc}"/>
+		<mkdir dir="${client}"/>
+	</target>
+
+	<!-- Building -->
+	<target name="compile" depends="init" description="Build the application">
+		<javac
+			srcdir="${src}"
+			destdir="${build}"
+			debug="false"
+			deprecation="true"
+			optimize="true"
+			includeantruntime="false">
+		</javac>
+		<antcall target="doc"></antcall>
+		<antcall target="make.jar"></antcall>
+	</target>
+
+	<!-- Jar-file creating  -->
+	<target name="make.jar" description="Create jar-file">
+		<jar
+			jarfile="${application}"
+			basedir="${build}"
+			manifest="${manifest}"/>
+	</target>
+
+	<!-- Generation of documentation -->
+	<target name="doc" description="Generate documentation">
+		<javadoc
+			encoding="UTF-8"
+			charset="UTF-8"
+			docencoding="UTF-8"
+			sourcepath="${src}"
+			destdir="${doc}">
+		</javadoc>
+	</target>
+
+	<!-- Launching -->
+	<target name="run" description="Run the application">
+		<java jar="${application}" fork="true"/>
+	</target>
+
+	<!-- All -->
+	<target name="all" description="All operations">
+		<antcall target="compile"></antcall>
+		<antcall target="run"></antcall>
+	</target>
+
+	<!-- Clearing -->
+	<target name="clean" description="Clearing">
+		<delete dir="${build}"/>
+		<delete dir="${doc}"/>
+		<delete dir="${client}"/>
+	</target>
+
+</project>
