@@ -7,7 +7,7 @@ Kiselevich Roman (xkisel00)
 Ermak Aleksei (xermak00)
 
 ## Popis projektu:
-Implementace aplikaci Pasians (Solitaire) Klondike, ktera vychazi ze stejnojmenne karetni hry.
+Implementace aplikaci Pasians (Solitaire) Klondike, ktera vychazi ze stejnojmenne karetni hry.</br>
 Aplikace implementuje zakladni pravidla hry. Je mozne rozehrat az 4 hry soucasne
 Pokud je rozehrana pouze jedna hra, plocha grafického rozhraní obsahuje pouze tuto hru (jedno hraci platno)
 Pokud je rozehrana vice nez jedna hra, plocha grafickeho rozhrani se rozdeli do 4 dlazdic, kazda pro jednu hru (hraci platno),
